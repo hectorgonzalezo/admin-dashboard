@@ -1,0 +1,26 @@
+@import "reset.css";
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+    grid-template-areas: 
+                        "sidebar header"
+                        "sidebar main";
+}
+
+header {
+    background-color: white;
+    grid-area: header;
+}
+
+nav {
+    background-color: blue;
+    grid-area: sidebar;
+}
+
+main {
+    background-color: grey;
+    grid-area: main;
+}
