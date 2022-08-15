@@ -1,9 +1,18 @@
 @import "reset.css";
 
+:root {
+    --shadow: 3px 3px 10px rgb(70, 70, 70);
+    --articles-gap: 1.5rem;
+}
+
+* {
+    outline: dashed black;
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 4fr; 
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
     height: 100vh;
     grid-template-areas: 
                         "sidebar header"
@@ -91,6 +100,106 @@ nav h2 {
 }
 
 main {
-    background-color: grey;
+    background-color: rgb(233, 233, 233);
     grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 250px;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+.title-main {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+}
+
+main article {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+}
+
+#projects > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr;
+    gap: var(--articles-gap);
+}
+
+#projects article {
+    border-left: 0.5rem solid;
+    border-color: orange;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    height: 250px;
+}
+
+article > h3 {
+    font-weight: bold;
+}
+
+article > p {
+    color:grey;
+    font-size: 0.9rem;
+}
+
+.project-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-self: center;
+}
+
+.right-side-main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+#announcements div {
+    display: grid;
+    gap: var(--articles-gap);
+}
+
+#announcements article {
+    display: flex;
+    flex-direction: column;
+}
+
+#announcements article div {
+    overflow: hidden;
+}
+
+#announcements article h2{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#announcements article p {
+    font-size: 0.8rem;
+}
+
+
+#trending article{
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+}
+
+#trending article > div{
+    display: flex;
+}
+
+main > div {
+    height: auto;
+    width: auto;
+}
+
+hr {
+    height: 0px;
+    width: 100%
 }
