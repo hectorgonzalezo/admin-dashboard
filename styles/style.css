@@ -15,6 +15,45 @@ header {
     grid-area: header;
     display: flex;
     flex-direction: column;
+    justify-content: space-around
+}
+
+header > div {
+    display: grid;
+    align-items: center;
+    gap: 10px
+}
+
+#header-top {
+    grid-template-columns: 1fr 7fr 0.5fr 0.5fr 2fr;
+    justify-content: start;
+}
+
+#search {
+    width: 80%;
+}
+
+#header-top span{
+    justify-self: center;
+}
+
+
+#header-bottom {
+    grid-template-columns: 1fr 4fr repeat(3, 1fr);
+}
+
+
+#header-bottom :not(#greetings){
+    justify-self: center;
+}
+
+
+#gong-small {
+    height: 30px;
+}
+
+#gong-big {
+    height: 50px;
 }
 
 nav {
