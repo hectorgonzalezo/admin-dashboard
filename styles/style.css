@@ -3,17 +3,17 @@
 :root {
     --shadow: 3px 3px 10px rgb(70, 70, 70);
     --articles-gap: 1.5rem;
+    --article-dimension: max(200px, 33vh);
 }
 
-* {
+/* * {
     outline: dashed black;
-}
+} */
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr; 
-    grid-template-rows: 1fr 5fr;
-    height: 100vh;
+    grid-template-columns: minmax(150px, 1fr) 5fr; 
+    grid-template-rows: 7rem 5fr;
     grid-template-areas: 
                         "sidebar header"
                         "sidebar main";
@@ -24,7 +24,8 @@ header {
     grid-area: header;
     display: flex;
     flex-direction: column;
-    justify-content: space-around
+    justify-content: space-around;
+    padding: 10px;
 }
 
 header > div {
@@ -70,7 +71,7 @@ nav {
     grid-area: sidebar;
     color: white;
     display: grid;
-    grid-template-rows: 1fr 3fr 2fr 3fr;
+    grid-template-rows: minmax(30px, 10vh) minmax(250px, 30vh) minmax(150px, 20vh) 1fr;
     gap: 40px;
 }
 
@@ -125,7 +126,7 @@ main article {
 
 #projects > div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-template-rows: 1fr;
     gap: var(--articles-gap);
 }
@@ -135,7 +136,7 @@ main article {
     border-color: orange;
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
-    height: 250px;
+    height: var(--article-dimension)
 }
 
 article > h3 {
@@ -145,6 +146,7 @@ article > h3 {
 article > p {
     color:grey;
     font-size: 0.9rem;
+    overflow: hidden;
 }
 
 .project-icons {
@@ -156,8 +158,8 @@ article > p {
 
 .right-side-main {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
+    grid-template-rows: minmax(350px, 40vh) 1fr;
+    gap: 3rem;
 }
 
 #announcements div {
@@ -166,12 +168,7 @@ article > p {
 }
 
 #announcements article {
-    display: flex;
-    flex-direction: column;
-}
-
-#announcements article div {
-    overflow: hidden;
+    overflow: scroll;
 }
 
 #announcements article h2{
