@@ -85,7 +85,7 @@ header>div {
 }
 
 #search:hover {
-    background-color: var(--color-dark);
+    border-style: double;
 }
 
 #header-top span {
@@ -171,9 +171,7 @@ nav ul li a:hover{
     width: 45px;
 }
 
-.sidebar-icon,
-.header-icon,
-.project-icon {
+.icon {
     width: 25px;
     justify-self: center;
 }
@@ -238,7 +236,7 @@ p {
     overflow: hidden;
 }
 
-.project-icons {
+#projects .icons {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
@@ -275,9 +273,19 @@ p {
     gap: 2rem;
 }
 
-#trending article>div {
+.user a {
     display: flex;
+    gap: 20px;
 }
+
+.user a :first-child{
+    flex: 1
+}
+
+.user a :nth-child(2){
+    flex: 5;
+}
+
 
 main>div {
     height: auto;
