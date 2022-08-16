@@ -3,8 +3,8 @@
 :root {
     --shadow: 3px 3px 10px rgb(70, 70, 70);
     --articles-gap: 1.5rem;
-    --article-dimension: max(200px, 33vh);
-    --color-light:#f0fdfa;
+    --article-dimension: max(150px, 20vh);
+    --color-light: #f0fdfa;
     --color-greyish: #bfdcd67f;
     --color-dark: #115e59;
     --color-complementary: rgb(245, 125, 92);
@@ -16,12 +16,13 @@
 } */
 
 body {
+    height: 100vh;
     display: grid;
-    grid-template-columns: minmax(150px, 1fr) 5fr; 
+    grid-template-columns: minmax(150px, 1fr) 5fr;
     grid-template-rows: 7rem 5fr;
-    grid-template-areas: 
-                        "sidebar header"
-                        "sidebar main";
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
 }
 
 header {
@@ -33,7 +34,7 @@ header {
     padding: 10px;
 }
 
-header > div {
+header>div {
     display: grid;
     align-items: center;
     gap: 10px
@@ -48,7 +49,7 @@ header > div {
     width: 80%;
 }
 
-#header-top span{
+#header-top span {
     justify-self: center;
 }
 
@@ -58,7 +59,7 @@ header > div {
 }
 
 
-#header-bottom :not(#greetings){
+#header-bottom :not(#greetings) {
     justify-self: center;
 }
 
@@ -110,7 +111,7 @@ nav ul {
     justify-content: space-around;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
 }
 
@@ -141,7 +142,7 @@ main article {
 
 #projects > div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr;
     gap: var(--articles-gap);
 }
@@ -154,7 +155,7 @@ main article {
     height: var(--article-dimension)
 }
 
-article > h3 {
+article>h3 {
     font-weight: bold;
 }
 
@@ -174,7 +175,7 @@ p {
 .right-side-main {
     display: grid;
     grid-template-rows: minmax(350px, 40vh) 1fr;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 #announcements div {
@@ -182,31 +183,30 @@ p {
     gap: var(--articles-gap);
 }
 
-#announcements article {
-    overflow: scroll;
-}
 
-#announcements article h2{
+#announcements article h2 {
     font-size: 0.9rem;
     font-weight: bold;
 }
 
-#announcements article p {
-    font-size: 0.8rem;
+#announcements p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
 }
 
 
-#trending article{
+#trending article {
     display: grid;
     grid-auto-rows: 1fr;
     gap: 2rem;
 }
 
-#trending article > div{
+#trending article>div {
     display: flex;
 }
 
-main > div {
+main>div {
     height: auto;
     width: auto;
 }
