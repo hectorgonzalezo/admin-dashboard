@@ -14,9 +14,11 @@
 <body>
     <header>
         <div id="header-top">
-            <span class="material-symbols-outlined">search</span>
-            <input type="search" name="search" id="search">
-            <span class="material-symbols-outlined">notifications_active</span>
+            <form action="" method="get" id="search-form">
+                <input type="image" id="search-image" alt="Search" class="header-icon" src="images/magnify.png">
+                <input type="search" name="search" id="search">
+            </form>
+            <img src="images/alarm-light-outline.png" alt="Alarm icon" class="header-icon">
             <img src="images/gong.png" alt="Gong icon" id="gong-small">
             <h3>Héctor González</h3>
         </div>
@@ -26,9 +28,11 @@
                 <p>Hi there,</p>
                 <h1>Héctor González (@hgonzalez)</h1>
             </div>
-            <button>New</button>
-            <button>Upload</button>
-            <button>Share</button>
+            <form>
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </form>
         </div>
     </header>
     <nav>
@@ -81,68 +85,72 @@
         <div id="projects">
             <h2 class="title-main" id="projects-title">Your Projects</h2>
             <div>
-            <article>
-                <h3>Super cool</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <div class="project-icons">
-                    <span class="material-symbols-outlined">thumb_up</span>
-                    <span class="material-symbols-outlined">visibility</span>
-                    <span class="material-symbols-outlined">share</span>
-                </div>
-            </article>
-            <article>
-                <h3>Less Cool</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At neque quaerat quae reprehenderit nihil
-                    mollitia minus itaque consequuntur sit labore quidem quisquam illo ipsa doloremque, aliquam, non
-                    adipisci? Laboriosam, excepturi.</p>
-                <div class="project-icons">
-                    <span class="material-symbols-outlined">thumb_up</span>
-                    <span class="material-symbols-outlined">visibility</span>
-                    <span class="material-symbols-outlined">share</span>
-                </div>
-            </article>
-            <article>
-                <h3>Impossible App</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At neque quaerat quae reprehenderit nihil
-                </p>
-                <div class="project-icons">
-                    <span class="material-symbols-outlined">thumb_up</span>
-                    <span class="material-symbols-outlined">visibility</span>
-                    <span class="material-symbols-outlined">share</span>
-                </div>
-            </article>
-            <article>
-                <h3>Easy Peasy App</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <div class="project-icons">
-                    <span class="material-symbols-outlined">thumb_up</span>
-                    <span class="material-symbols-outlined">visibility</span>
-                    <span class="material-symbols-outlined">share</span>
-                </div>
-            </article>
-            <article>
-                <h3>Ad Blocker</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At neque quaerat quae reprehenderit nihil
-                    mollitia minus itaque consequuntur sit labore quidem quisquam illo ipsa doloremque, aliquam, non
-                    adipisci? Laboriosam, excepturi.</p>
-                <div class="project-icons">
-                    <span class="material-symbols-outlined">thumb_up</span>
-                    <span class="material-symbols-outlined">visibility</span>
-                    <span class="material-symbols-outlined">share</span>
-                </div>
-            </article>
-            <article>
-                <h3>Money Maker</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At neque quaerat quae reprehenderit nihil
-                    mollitia minus itaque consequuntur sit labore quidem quisquam illo ipsa doloremque, aliquam, non
-                    adipisci? Laboriosam, excepturi.</p>
-                <div class="project-icons">
-                    <span class="material-symbols-outlined">thumb_up</span>
-                    <span class="material-symbols-outlined">visibility</span>
-                    <span class="material-symbols-outlined">share</span>
-                </div>
-            </article>
-        </div>
+                <article>
+                    <h3>Super cool</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <div class="project-icons">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                        <span class="material-symbols-outlined">visibility</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </article>
+                <article>
+                    <h3>Less Cool</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At neque quaerat quae reprehenderit
+                        nihil
+                        mollitia minus itaque consequuntur sit labore quidem quisquam illo ipsa doloremque, aliquam, non
+                        adipisci? Laboriosam, excepturi.</p>
+                    <div class="project-icons">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                        <span class="material-symbols-outlined">visibility</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </article>
+                <article>
+                    <h3>Impossible App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At neque quaerat quae reprehenderit
+                        nihil
+                    </p>
+                    <div class="project-icons">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                        <span class="material-symbols-outlined">visibility</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </article>
+                <article>
+                    <h3>Easy Peasy App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                    <div class="project-icons">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                        <span class="material-symbols-outlined">visibility</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </article>
+                <article>
+                    <h3>Ad Blocker</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At neque quaerat quae reprehenderit
+                        nihil
+                        mollitia minus itaque consequuntur sit labore quidem quisquam illo ipsa doloremque, aliquam, non
+                        adipisci? Laboriosam, excepturi.</p>
+                    <div class="project-icons">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                        <span class="material-symbols-outlined">visibility</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </article>
+                <article>
+                    <h3>Money Maker</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At neque quaerat quae reprehenderit
+                        nihil
+                        mollitia minus itaque consequuntur sit labore quidem quisquam illo ipsa doloremque, aliquam, non
+                        adipisci? Laboriosam, excepturi.</p>
+                    <div class="project-icons">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                        <span class="material-symbols-outlined">visibility</span>
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                </article>
+            </div>
         </div>
         <div class="right-side-main">
             <div id="announcements">
